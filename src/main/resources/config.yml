@@ -12,24 +12,32 @@
 # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html - Sound List
 # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Effect.html - Effect List
 # -------------------------------------------------------------------------------
+#       XPLEVELS USES ADVENTUREAPI COLOR FORMATTING. PLEASE SEE THE DOCS
+#       FOR MORE INFORMATION. https://docs.advntr.dev/minimessage/format.html#color
+# -------------------------------------------------------------------------------
+# Style Examples:
+# Longhand: "<bold><italic><underlined><strikethrough><obfuscated>"
+# Shorthand: "<b><i><u><st><obf>"
+# Color Examples:
+# "<#fcba03>Hello World
 
 messages:
   titles:
     enabled: true
-    title: "&6&lLEVEL UP"
-    subtitle: "&6You have leveled up to level: &e&l{new-level}&6"
-    fade-in: 15
-    stay: 50
-    fade-out: 15
+    title: "<#fcba03><bold>LEVEL UP"
+    subtitle: "<#fcba03>You have leveled up to level: <#fcf003><bold>{new-level}"
+    fade-in: 300
+    stay: 1500
+    fade-out: 300
   chat:
     enabled: false
     message: |-
-      &r &r
-      &r &r
-      &6&lLEVEL UP
-      &6You have leveled up to level: &e&l{new-level}
-      &r &r
-      &r &r
+      <reset>
+      <reset>
+      <#fcba03><bold>LEVEL UP
+      <#fcba03>You have leveled up to level: <#fcf003><bold>{new-level}
+      <reset>
+      <reset>
 
 effects:
   sounds:
@@ -39,6 +47,11 @@ effects:
     enabled: true
     name: MOBSPAWNER_FLAMES
 
+
+# -------------------------------------------------------------------------------
+#       DUE TO THE WAY BUKKIT EXECUTES COMMANDS, COMMANDS STILL
+#       TAKE THE AMPERSAND (&) FOR COLORS IN COMMANDS.
+# -------------------------------------------------------------------------------
 commands:
   enabled: true
   list:
