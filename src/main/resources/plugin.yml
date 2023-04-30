@@ -1,0 +1,8 @@
+name: XPLevels
+version: '${project.version}'
+main: sh.solsk.xplevels.XPLevels
+api-version: 1.19
+prefix: XPLevels
+load: STARTUP
+authors: [solsk]
+website: https://docs.solsk.sh/xplevels

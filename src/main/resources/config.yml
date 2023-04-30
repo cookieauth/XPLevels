@@ -1,0 +1,45 @@
+# -------------------------------------------------------------------------------
+#       PLACEHOLDERS - PLACEHOLDERAPI SUPPORT PROJECTED FOR FUTURE UPDATES
+# -------------------------------------------------------------------------------
+# {player} - Player Name
+# {displayname} - Player Display Name
+# {new-level} - Get New Level Player
+# {prior-level} - Old Level Player
+# {xp-level} - Xp to Next Level
+# -------------------------------------------------------------------------------
+#       TO FIND NEW SOUNDS OR EFFECTS, PLEASE VISIT THE LINKS BELOW
+# -------------------------------------------------------------------------------
+# https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html - Sound List
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Effect.html - Effect List
+# -------------------------------------------------------------------------------
+
+messages:
+  titles:
+    enabled: true
+    title: "&6&lLEVEL UP"
+    subtitle: "&6You have leveled up to level: &e&l{new-level}&6"
+    fade-in: 15
+    stay: 50
+    fade-out: 15
+  chat:
+    enabled: false
+    message: |-
+      &r &r
+      &r &r
+      &6&lLEVEL UP
+      &6You have leveled up to level: &e&l{new-level}
+      &r &r
+      &r &r
+
+effects:
+  sounds:
+    enabled: true
+    name: ENTITY_ENDER_DRAGON_GROWL
+  particles:
+    enabled: true
+    name: MOBSPAWNER_FLAMES
+
+commands:
+  enabled: true
+  list:
+    - 'broadcast &6{player} has just leveled up to level: &e{new-level}.'
