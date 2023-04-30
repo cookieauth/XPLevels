@@ -47,7 +47,7 @@ public class XPLevelEvent implements Listener {
                     Bukkit.dispatchCommand((CommandSender) Bukkit.getConsoleSender(), command.replace("{player}", player.getName())
                             .replace("{displayplayer}", player.getDisplayName())
                             .replace("{new-level}", String.valueOf(event.getNewLevel()))
-                            .replace("{old-level}", String.valueOf(event.getOldLevel()))
+                            .replace("{prior-level}", String.valueOf(event.getOldLevel()))
                             .replace("{xp-to-level}", String.valueOf(player.getExpToLevel())));
                 }
             }
@@ -59,19 +59,19 @@ public class XPLevelEvent implements Listener {
             return configuration.getString("messages.chat.message")
                     .replace("{player}", player.getName())
                     .replace("{new-level}", String.valueOf(event.getNewLevel()))
-                    .replace("{old-level}", String.valueOf(event.getOldLevel()))
+                    .replace("{prior-level}", String.valueOf(event.getOldLevel()))
                     .replace("{xp-to-level}", String.valueOf(player.getExpToLevel()));
         } else if (type.equalsIgnoreCase("title")) {
             return configuration.getString("messages.titles.title")
                     .replace("{player}", player.getName())
                     .replace("{new-level}", String.valueOf(event.getNewLevel()))
-                    .replace("{old-level}", String.valueOf(event.getOldLevel()))
+                    .replace("{prior-level}", String.valueOf(event.getOldLevel()))
                     .replace("{xp-to-level}", String.valueOf(player.getExpToLevel()));
         } else if (type.equalsIgnoreCase("subtitle")) {
             return configuration.getString("messages.titles.subtitle")
                     .replace("{player}", player.getName())
                     .replace("{new-level}", String.valueOf(event.getNewLevel()))
-                    .replace("{old-level}", String.valueOf(event.getOldLevel()))
+                    .replace("{prior-level}", String.valueOf(event.getOldLevel()))
                     .replace("{xp-to-level}", String.valueOf(player.getExpToLevel()));
         }
         return "Ruh-roh! There was an error, if you are an administrator, please contact the developer immediately!";
